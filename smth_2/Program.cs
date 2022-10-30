@@ -239,6 +239,10 @@ void playGame()
                 choiseO(choise);
                 i++;
             }
+            else
+            {
+                continue;
+            }
         }
         else
         {
