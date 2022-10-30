@@ -86,11 +86,6 @@ void playgroundFill()
 
 void choiseX(int playerChoise)
 {   
-    while (playerChoise < 1 && playerChoise > 9)
-    {
-        Console.WriteLine("Введите цифру от 1 до 9: ");
-        playerChoise = Convert.ToInt32(Console.ReadLine());
-    }
     if (playerChoise == 1)
     {
         Console.SetCursorPosition(4,10);
@@ -149,11 +144,6 @@ void choiseX(int playerChoise)
 
 void choiseO(int playerChoise)
 {   
-    while (playerChoise < 1 && playerChoise > 9)
-    {
-        Console.WriteLine("Введите цифру от 1 до 9: ");
-        playerChoise = Convert.ToInt32(Console.ReadLine());
-    }
     if (playerChoise == 1)
     {
         Console.SetCursorPosition(4,10);
@@ -210,26 +200,209 @@ void choiseO(int playerChoise)
     }
 }
 
+int findAlreadyChosen(int[] array, int find)
+{
+    int position = -1;
+    int index = 0;
+    int size = array.Length;
+    while (index < size)
+    {
+        if (array[index] == find)
+        {
+            position = index;
+            break;
+        }
+        index++;
+    }
+    return position;
+}
+
 void playGame()
 {
-    int choise = Convert.ToInt32(Console.ReadLine());
-    choiseX(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseO(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseX(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseO(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseX(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseO(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseX(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseO(choise);
-    choise = Convert.ToInt32(Console.ReadLine());
-    choiseX(choise);
+    int[] alreadyChosen = new int [10000];
+    int i = 0;
+    while (true)
+    {
+        int choise = Convert.ToInt32(Console.ReadLine());
+        choiseX(choise);
+        alreadyChosen[i] = choise;
+        choise = Convert.ToInt32(Console.ReadLine());
+        int pos = findAlreadyChosen(alreadyChosen, choise);
+        if (pos == -1 && choise >= 1 && choise <= 9)
+        {
+            i++;
+            choiseO(choise);
+            alreadyChosen[i] = choise;
+            choise = Convert.ToInt32(Console.ReadLine());
+            pos = findAlreadyChosen(alreadyChosen, choise);
+            if (pos == -1 && choise >= 1 && choise <= 9)
+            {
+                i++;
+                choiseX(choise);
+                alreadyChosen[i] = choise;
+                choise = Convert.ToInt32(Console.ReadLine());
+                pos = findAlreadyChosen(alreadyChosen, choise);
+                if (pos == -1 && choise >= 1 && choise <= 9)
+                {
+                    i++;
+                    choiseO(choise);
+                    alreadyChosen[i] = choise;
+                    choise = Convert.ToInt32(Console.ReadLine());
+                    pos = findAlreadyChosen(alreadyChosen, choise);
+                    if (pos == -1 && choise >= 1 && choise <= 9)
+                    {
+                        i++;
+                        choiseX(choise);
+                        alreadyChosen[i] = choise;
+                        choise = Convert.ToInt32(Console.ReadLine());
+                        pos = findAlreadyChosen(alreadyChosen, choise);
+                        if (pos == -1 && choise >= 1 && choise <= 9)
+                        {
+                            i++;
+                            choiseO(choise);
+                            alreadyChosen[i] = choise;
+                            choise = Convert.ToInt32(Console.ReadLine());
+                            pos = findAlreadyChosen(alreadyChosen, choise);
+                            if (pos == -1 && choise >= 1 && choise <= 9)
+                            {
+                                i++;
+                                choiseX(choise);
+                                alreadyChosen[i] = choise;
+                                choise = Convert.ToInt32(Console.ReadLine());
+                                pos = findAlreadyChosen(alreadyChosen, choise);
+                                if (pos == -1 && choise >= 1 && choise <= 9)
+                                {
+                                    i++;
+                                    choiseO(choise);
+                                    alreadyChosen[i] = choise;
+                                    choise = Convert.ToInt32(Console.ReadLine());
+                                    pos = findAlreadyChosen(alreadyChosen, choise);
+                                    if (pos == -1 && choise >= 1 && choise <= 9)
+                                    {
+                                        choise = Convert.ToInt32(Console.ReadLine());
+                                        choiseX(choise);
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        while (true)
+                                        {
+                                            if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                                            {
+                                                choise = Convert.ToInt32(Console.ReadLine());
+                                            }
+                                            else
+                                            {
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                   while (true)
+                                    {
+                                        if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                                        {
+                                            choise = Convert.ToInt32(Console.ReadLine());
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+                                    } 
+                                }
+                            }
+                            else
+                            {
+                                while (true)
+                                {
+                                    if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                                    {
+                                        choise = Convert.ToInt32(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            while (true)
+                            {
+                                if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                                {
+                                    choise = Convert.ToInt32(Console.ReadLine());
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        while (true)
+                        {
+                            if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                            {
+                                choise = Convert.ToInt32(Console.ReadLine());
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                   while (true)
+                    {
+                        if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                        {
+                            choise = Convert.ToInt32(Console.ReadLine());
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    } 
+                }
+            }
+            else
+            {
+                while (true)
+                {
+                    if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                    {
+                        choise = Convert.ToInt32(Console.ReadLine());
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            while (true)
+            {
+                if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
+                {
+                    choise = Convert.ToInt32(Console.ReadLine());
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+    }
 }
 
 Console.WriteLine("Сначала ходят крестики, затем нолики и так далее до конца игры. Выберите клетку: ");
