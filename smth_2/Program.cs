@@ -37,117 +37,105 @@ void playgroundFill()
 
 void choiseX(int playerChoise)
 {   
-    if (playerChoise == 1)
+    switch(playerChoise)
     {
-        Console.SetCursorPosition(4,10);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 2)
-    {
-        Console.SetCursorPosition(8,10);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 3)
-    {
-        Console.SetCursorPosition(12,10);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 4)
-    {
-        Console.SetCursorPosition(4,7);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 5)
-    {
-        Console.SetCursorPosition(8,7);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 6)
-    {
-        Console.SetCursorPosition(12,7);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 7)
-    {
-        Console.SetCursorPosition(4,4);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 8)
-    {
-        Console.SetCursorPosition(8,4);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 9)
-    {
-        Console.SetCursorPosition(12,4);
-        Console.WriteLine("X");
-        Console.SetCursorPosition(0,1);
+        case 1:
+            Console.SetCursorPosition(4,10);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 2:
+            Console.SetCursorPosition(8,10);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 3:
+            Console.SetCursorPosition(12,10);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 4:
+            Console.SetCursorPosition(4,7);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 5:
+            Console.SetCursorPosition(8,7);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 6:
+            Console.SetCursorPosition(12,7);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 7:
+            Console.SetCursorPosition(4,4);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 8:
+            Console.SetCursorPosition(8,4);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 9:
+            Console.SetCursorPosition(12,4);
+            Console.WriteLine("X");
+            Console.SetCursorPosition(0,1);
+            break;
     }
 }
 
 void choiseO(int playerChoise)
 {   
-    if (playerChoise == 1)
+    switch(playerChoise)
     {
-        Console.SetCursorPosition(4,10);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 2)
-    {
-        Console.SetCursorPosition(8,10);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 3)
-    {
-        Console.SetCursorPosition(12,10);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 4)
-    {
-        Console.SetCursorPosition(4,7);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 5)
-    {
-        Console.SetCursorPosition(8,7);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 6)
-    {
-        Console.SetCursorPosition(12,7);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 7)
-    {
-        Console.SetCursorPosition(4,4);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 8)
-    {
-        Console.SetCursorPosition(8,4);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
-    }
-    else if (playerChoise == 9)
-    {
-        Console.SetCursorPosition(12,4);
-        Console.WriteLine("O");
-        Console.SetCursorPosition(0,1);
+        case 1:
+            Console.SetCursorPosition(4,10);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 2:
+            Console.SetCursorPosition(8,10);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 3:
+            Console.SetCursorPosition(12,10);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 4:
+            Console.SetCursorPosition(4,7);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 5:
+            Console.SetCursorPosition(8,7);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 6:
+            Console.SetCursorPosition(12,7);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 7:
+            Console.SetCursorPosition(4,4);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 8:
+            Console.SetCursorPosition(8,4);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
+        case 9:
+            Console.SetCursorPosition(12,4);
+            Console.WriteLine("O");
+            Console.SetCursorPosition(0,1);
+            break;
     }
 }
 
