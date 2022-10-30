@@ -179,7 +179,7 @@ void playGame()
     int iO = 0;
     while (i < 9)
     {
-        Console.SetCursorPosition(81,0);
+        Console.SetCursorPosition(72,0);
         int choise = Convert.ToInt32(Console.ReadLine());
         if (choise >= 1 && choise <= 9)
         {
@@ -191,42 +191,50 @@ void playGame()
                 choisesOfX[iX] = choise;
                 if (findAlreadyChosen(choisesOfX, 1) != -1 && findAlreadyChosen(choisesOfX, 4) != -1 && findAlreadyChosen(choisesOfX, 7) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 2) != -1 && findAlreadyChosen(choisesOfX, 5) != -1 && findAlreadyChosen(choisesOfX, 8) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 3) != -1 && findAlreadyChosen(choisesOfX, 6) != -1 && findAlreadyChosen(choisesOfX, 9) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 1) != -1 && findAlreadyChosen(choisesOfX, 2) != -1 && findAlreadyChosen(choisesOfX, 3) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 4) != -1 && findAlreadyChosen(choisesOfX, 5) != -1 && findAlreadyChosen(choisesOfX, 6) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 7) != -1 && findAlreadyChosen(choisesOfX, 8) != -1 && findAlreadyChosen(choisesOfX, 9) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 1) != -1 && findAlreadyChosen(choisesOfX, 5) != -1 && findAlreadyChosen(choisesOfX, 9) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfX, 7) != -1 && findAlreadyChosen(choisesOfX, 5) != -1 && findAlreadyChosen(choisesOfX, 3) != -1)
                 {
-                    Console.WriteLine("Крестики выиграли!");
+                    Console.WriteLine("Крестики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 iX++;
@@ -238,42 +246,50 @@ void playGame()
                 choisesOfO[iO] = choise;
                 if (findAlreadyChosen(choisesOfO, 1) != -1 && findAlreadyChosen(choisesOfO, 4) != -1 && findAlreadyChosen(choisesOfO, 7) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 2) != -1 && findAlreadyChosen(choisesOfO, 5) != -1 && findAlreadyChosen(choisesOfO, 8) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 3) != -1 && findAlreadyChosen(choisesOfO, 6) != -1 && findAlreadyChosen(choisesOfO, 9) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 1) != -1 && findAlreadyChosen(choisesOfO, 2) != -1 && findAlreadyChosen(choisesOfO, 3) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 4) != -1 && findAlreadyChosen(choisesOfO, 5) != -1 && findAlreadyChosen(choisesOfO, 6) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 7) != -1 && findAlreadyChosen(choisesOfO, 8) != -1 && findAlreadyChosen(choisesOfO, 9) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 1) != -1 && findAlreadyChosen(choisesOfO, 5) != -1 && findAlreadyChosen(choisesOfO, 9) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 if (findAlreadyChosen(choisesOfO, 7) != -1 && findAlreadyChosen(choisesOfO, 5) != -1 && findAlreadyChosen(choisesOfO, 3) != -1)
                 {
-                    Console.WriteLine("Нолики выиграли!");
+                    Console.WriteLine("Нолики выиграли! Нажмите Enter чтобы выйти: ");
+                    Console.ReadLine();
                     break;
                 }
                 iO++;
@@ -289,9 +305,15 @@ void playGame()
             continue;
         }
     }
+    if (i == 9)
+    {
+        Console.WriteLine("Ничья! Нажмите Enter чтобы выйти: ");
+        Console.ReadLine();
+    }
 }
 
-Console.WriteLine("Сначала ходят крестики, затем нолики и так далее до конца игры. Выберите клетку: ");
+Console.WriteLine("Сначала ходят крестики, затем нолики. Нажмите Enter, чтобы начать игру: ");
+Console.ReadLine();
 
 playgroundFill();
 
