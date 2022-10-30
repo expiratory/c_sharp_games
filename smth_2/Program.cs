@@ -220,187 +220,29 @@ int findAlreadyChosen(int[] array, int find)
 void playGame()
 {
     int[] alreadyChosen = new int [10000];
+    int pos = -1;
     int i = 0;
-    while (true)
+    while (i < 9)
     {
         int choise = Convert.ToInt32(Console.ReadLine());
-        choiseX(choise);
-        alreadyChosen[i] = choise;
-        choise = Convert.ToInt32(Console.ReadLine());
-        int pos = findAlreadyChosen(alreadyChosen, choise);
-        if (pos == -1 && choise >= 1 && choise <= 9)
+        if (choise >= 1 && choise <= 9)
         {
-            i++;
-            choiseO(choise);
-            alreadyChosen[i] = choise;
-            choise = Convert.ToInt32(Console.ReadLine());
             pos = findAlreadyChosen(alreadyChosen, choise);
-            if (pos == -1 && choise >= 1 && choise <= 9)
+            alreadyChosen[i] = choise;
+            if (i%2 == 0 && pos == -1)
             {
-                i++;
                 choiseX(choise);
-                alreadyChosen[i] = choise;
-                choise = Convert.ToInt32(Console.ReadLine());
-                pos = findAlreadyChosen(alreadyChosen, choise);
-                if (pos == -1 && choise >= 1 && choise <= 9)
-                {
-                    i++;
-                    choiseO(choise);
-                    alreadyChosen[i] = choise;
-                    choise = Convert.ToInt32(Console.ReadLine());
-                    pos = findAlreadyChosen(alreadyChosen, choise);
-                    if (pos == -1 && choise >= 1 && choise <= 9)
-                    {
-                        i++;
-                        choiseX(choise);
-                        alreadyChosen[i] = choise;
-                        choise = Convert.ToInt32(Console.ReadLine());
-                        pos = findAlreadyChosen(alreadyChosen, choise);
-                        if (pos == -1 && choise >= 1 && choise <= 9)
-                        {
-                            i++;
-                            choiseO(choise);
-                            alreadyChosen[i] = choise;
-                            choise = Convert.ToInt32(Console.ReadLine());
-                            pos = findAlreadyChosen(alreadyChosen, choise);
-                            if (pos == -1 && choise >= 1 && choise <= 9)
-                            {
-                                i++;
-                                choiseX(choise);
-                                alreadyChosen[i] = choise;
-                                choise = Convert.ToInt32(Console.ReadLine());
-                                pos = findAlreadyChosen(alreadyChosen, choise);
-                                if (pos == -1 && choise >= 1 && choise <= 9)
-                                {
-                                    i++;
-                                    choiseO(choise);
-                                    alreadyChosen[i] = choise;
-                                    choise = Convert.ToInt32(Console.ReadLine());
-                                    pos = findAlreadyChosen(alreadyChosen, choise);
-                                    if (pos == -1 && choise >= 1 && choise <= 9)
-                                    {
-                                        choise = Convert.ToInt32(Console.ReadLine());
-                                        choiseX(choise);
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        while (true)
-                                        {
-                                            if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                                            {
-                                                choise = Convert.ToInt32(Console.ReadLine());
-                                            }
-                                            else
-                                            {
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                   while (true)
-                                    {
-                                        if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                                        {
-                                            choise = Convert.ToInt32(Console.ReadLine());
-                                        }
-                                        else
-                                        {
-                                            break;
-                                        }
-                                    } 
-                                }
-                            }
-                            else
-                            {
-                                while (true)
-                                {
-                                    if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                                    {
-                                        choise = Convert.ToInt32(Console.ReadLine());
-                                    }
-                                    else
-                                    {
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            while (true)
-                            {
-                                if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                                {
-                                    choise = Convert.ToInt32(Console.ReadLine());
-                                }
-                                else
-                                {
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        while (true)
-                        {
-                            if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                            {
-                                choise = Convert.ToInt32(Console.ReadLine());
-                            }
-                            else
-                            {
-                                break;
-                            }
-                        }
-                    }
-                }
-                else
-                {
-                   while (true)
-                    {
-                        if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                        {
-                            choise = Convert.ToInt32(Console.ReadLine());
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    } 
-                }
+                i++;
             }
-            else
+            else if (i%2 == 1 && pos == -1)
             {
-                while (true)
-                {
-                    if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                    {
-                        choise = Convert.ToInt32(Console.ReadLine());
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
+                choiseO(choise);
+                i++;
             }
         }
         else
         {
-            while (true)
-            {
-                if (choise == alreadyChosen[pos] && choise <= 1 && choise >= 9)
-                {
-                    choise = Convert.ToInt32(Console.ReadLine());
-                }
-                else
-                {
-                    break;
-                }
-            }
+            continue;
         }
     }
 }
