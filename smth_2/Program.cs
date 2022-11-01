@@ -168,7 +168,7 @@ void playGame()
     while (i < 9)
     {
         Console.SetCursorPosition(0,1);
-        int choise = Convert.ToInt32(Console.ReadLine());
+        Int32.TryParse(Console.ReadLine(), out int choise);
         Console.SetCursorPosition(0,1);
         Console.WriteLine("                                                  ");
         if (choise >= 1 && choise <= 9)
