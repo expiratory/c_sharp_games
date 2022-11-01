@@ -169,9 +169,11 @@ void playGame()
     while (i < 9)
     {
         Console.SetCursorPosition(0,1);
+        Console.WriteLine("Выберите номер поля для хода: ");
+        Console.SetCursorPosition(32,1);
         Int32.TryParse(Console.ReadLine(), out int choise);
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("                                                  ");
+        Console.WriteLine("                                                                                                    ");
         if (choise >= 1 && choise <= 9)
         {
             pos = findAlreadyChosen(alreadyChosen, choise);

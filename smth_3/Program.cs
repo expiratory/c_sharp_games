@@ -171,7 +171,7 @@ void playgroundFill()
 
 void mixArray(int[] array11, int[] array22, int[] array33, int[] array44)
 {
-    int repeat = new Random().Next(2,3);
+    int repeat = new Random().Next(1,10);
     int count = 0;
     if (array11.Length == array22.Length && array33.Length == array44.Length && array22.Length == array33.Length)
     {
@@ -232,24 +232,18 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
 
     while(CheckArraysEquality(fifteenki1, GG1) == false || CheckArraysEquality(fifteenki2, GG2) == false || CheckArraysEquality(fifteenki3, GG3) == false || CheckArraysEquality(fifteenki4, GG4) == false)
     {
-        Console.WriteLine("Выбор поля 1: ");
-        Console.SetCursorPosition(15,1);
+        Console.WriteLine("Введите номер клетки, которую хотите передвинуть на пустое место: ");
+        Console.SetCursorPosition(66,1);
         Int32.TryParse(Console.ReadLine(), out int playerChoise1);
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("                                                  ");
+        Console.WriteLine("                                                                                                   ");
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("Выбор поля 2: ");
-        Console.SetCursorPosition(15,1);
-        Int32.TryParse(Console.ReadLine(), out int playerChoise2);
-        Console.SetCursorPosition(0,1);
-        Console.WriteLine("                                                  ");
-        Console.SetCursorPosition(0,1);
-        if ((playerChoise1 >= 1 && playerChoise1 <=15 && playerChoise2 == 0) || (playerChoise2 >= 1 && playerChoise2 <=15 && playerChoise1 == 0))
+        if (playerChoise1 >= 1 && playerChoise1 <=15)
         {
-            if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki1, playerChoise2) != -1)
+            if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki1, 0) != -1)
             {
                 int position1 = findPosition(fifteenki1, playerChoise1);
-                int position2 = findPosition(fifteenki1, playerChoise2);
+                int position2 = findPosition(fifteenki1, 0);
                 if (Math.Abs(position1 - position2) == 1)
                 {
                     int temp = fifteenki1[position1];
@@ -259,10 +253,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki2, playerChoise2) != -1)
+            if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki2, 0) != -1)
             {
                 int position1 = findPosition(fifteenki2, playerChoise1);
-                int position2 = findPosition(fifteenki2, playerChoise2);
+                int position2 = findPosition(fifteenki2, 0);
                 if (Math.Abs(position1 - position2) == 1)
                 {
                     int temp = fifteenki2[position1];
@@ -272,10 +266,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
+            if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki3, 0) != -1)
             {
                 int position1 = findPosition(fifteenki3, playerChoise1);
-                int position2 = findPosition(fifteenki3, playerChoise2);
+                int position2 = findPosition(fifteenki3, 0);
                 if (Math.Abs(position1 - position2) == 1)
                 {
                     int temp = fifteenki3[position1];
@@ -285,10 +279,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki4, playerChoise2) != -1)
+            if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki4, 0) != -1)
             {
                 int position1 = findPosition(fifteenki4, playerChoise1);
-                int position2 = findPosition(fifteenki4, playerChoise2);
+                int position2 = findPosition(fifteenki4, 0);
                 if (Math.Abs(position1 - position2) == 1)
                 {
                     int temp = fifteenki4[position1];
@@ -298,10 +292,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki2, playerChoise2) != -1)
+            if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki2, 0) != -1)
             {
                 int position1 = findPosition(fifteenki1, playerChoise1);
-                int position2 = findPosition(fifteenki2, playerChoise2);
+                int position2 = findPosition(fifteenki2, 0);
                 if (Math.Abs(position1 - position2) == 0)
                 {
                     int temp = fifteenki1[position1];
@@ -311,10 +305,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki1, playerChoise2) != -1)
+            if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki1, 0) != -1)
             {
                 int position1 = findPosition(fifteenki2, playerChoise1);
-                int position2 = findPosition(fifteenki1, playerChoise2);
+                int position2 = findPosition(fifteenki1, 0);
                 if (Math.Abs(position1 - position2) == 0)
                 {
                     int temp = fifteenki2[position1];
@@ -324,10 +318,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
+            if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki3, 0) != -1)
             {
                 int position1 = findPosition(fifteenki2, playerChoise1);
-                int position2 = findPosition(fifteenki3, playerChoise2);
+                int position2 = findPosition(fifteenki3, 0);
                 if (Math.Abs(position1 - position2) == 0)
                 {
                     int temp = fifteenki2[position1];
@@ -337,10 +331,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki2, playerChoise2) != -1)
+            if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki2, 0) != -1)
             {
                 int position1 = findPosition(fifteenki3, playerChoise1);
-                int position2 = findPosition(fifteenki2, playerChoise2);
+                int position2 = findPosition(fifteenki2, 0);
                 if (Math.Abs(position1 - position2) == 0)
                 {
                     int temp = fifteenki3[position1];
@@ -350,10 +344,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki4, playerChoise2) != -1)
+            if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki4, 0) != -1)
             {
                 int position1 = findPosition(fifteenki3, playerChoise1);
-                int position2 = findPosition(fifteenki4, playerChoise2);
+                int position2 = findPosition(fifteenki4, 0);
                 if (Math.Abs(position1 - position2) == 0)
                 {
                     int temp = fifteenki3[position1];
@@ -363,10 +357,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     continue;
                 }
             }
-            if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
+            if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki3, 0) != -1)
             {
                 int position1 = findPosition(fifteenki4, playerChoise1);
-                int position2 = findPosition(fifteenki3, playerChoise2);
+                int position2 = findPosition(fifteenki3, 0);
                 if (Math.Abs(position1 - position2) == 0)
                 {
                     int temp = fifteenki4[position1];
@@ -387,16 +381,15 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
         }
     }
     if (CheckArraysEquality(fifteenki1, GG1) == true && CheckArraysEquality(fifteenki2, GG2) == true && CheckArraysEquality(fifteenki3, GG3) == true && CheckArraysEquality(fifteenki4, GG4) == true)
-        {
-            Console.WriteLine("Вы выиграли! Нажмите Enter чтобы выйти: ");
-            while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
-        }
+    {
+        Console.WriteLine("Вы выиграли! Нажмите Enter чтобы выйти: ");
+        while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
+    }
 }
 
 mixArray(fifteenki1, fifteenki2, fifteenki3, fifteenki4);
 
-Console.WriteLine("Пятнашки. Введите поочередно номера двух полей, которые хотите поменять местами.");
-Console.WriteLine("Одним из полей всегда должен быть 0 - пустое поле. Нажмите Enter, чтобы начать игру: ");
+Console.WriteLine("Пятнашки. Нажмите Enter, чтобы начать игру: ");
 while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
 
 playgroundFill();
