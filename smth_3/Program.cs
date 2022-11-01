@@ -133,6 +133,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki1[position1] = fifteenki1[position2];
                     fifteenki1[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki2, playerChoise2) != -1)
@@ -145,6 +146,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki2[position1] = fifteenki2[position2];
                     fifteenki2[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
@@ -157,6 +159,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki3[position1] = fifteenki3[position2];
                     fifteenki3[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki4, playerChoise2) != -1)
@@ -169,6 +172,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki4[position1] = fifteenki4[position2];
                     fifteenki4[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki2, playerChoise2) != -1)
@@ -181,6 +185,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki1[position1] = fifteenki2[position2];
                     fifteenki2[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki1, playerChoise2) != -1)
@@ -193,6 +198,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki2[position1] = fifteenki1[position2];
                     fifteenki1[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki2, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
@@ -205,6 +211,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki2[position1] = fifteenki3[position2];
                     fifteenki3[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki2, playerChoise2) != -1)
@@ -217,6 +224,7 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki3[position1] = fifteenki2[position2];
                     fifteenki2[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
             if (findPosition(fifteenki3, playerChoise1) != -1 && findPosition(fifteenki4, playerChoise2) != -1)
@@ -229,20 +237,22 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
                     fifteenki3[position1] = fifteenki4[position2];
                     fifteenki4[position2] = temp;
                     playgroundFill();
+                    continue;
                 }
             }
-            // if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
-            // {
-            //     int position1 = findPosition(fifteenki4, playerChoise1);
-            //     int position2 = findPosition(fifteenki3, playerChoise2);
-            //     if (Math.Abs(position1 - position2) == 0)
-            //     {
-            //         int temp = fifteenki4[position1];
-            //         fifteenki4[position1] = fifteenki3[position2];
-            //         fifteenki3[position2] = temp;
-            //         playgroundFill();
-            //     }
-            // }
+            if (findPosition(fifteenki4, playerChoise1) != -1 && findPosition(fifteenki3, playerChoise2) != -1)
+            {
+                int position1 = findPosition(fifteenki4, playerChoise1);
+                int position2 = findPosition(fifteenki3, playerChoise2);
+                if (Math.Abs(position1 - position2) == 0)
+                {
+                    int temp = fifteenki4[position1];
+                    fifteenki4[position1] = fifteenki3[position2];
+                    fifteenki3[position2] = temp;
+                    playgroundFill();
+                    continue;
+                }
+            }
             else
             {
                 continue;
