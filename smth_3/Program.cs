@@ -119,8 +119,18 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
 
     while(CheckArraysEquality(fifteenki1, GG1) == false || CheckArraysEquality(fifteenki2, GG2) == false || CheckArraysEquality(fifteenki3, GG3) == false || CheckArraysEquality(fifteenki4, GG4) == false)
     {
-        int playerChoise1 = Convert.ToInt32(Console.ReadLine());
-        int playerChoise2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Выбор 1: ");
+        Console.SetCursorPosition(10,1);
+        Int32.TryParse(Console.ReadLine(), out int playerChoise1);
+        Console.SetCursorPosition(0,1);
+        Console.WriteLine("                                                  ");
+        Console.SetCursorPosition(0,1);
+        Console.WriteLine("Выбор 2: ");
+        Console.SetCursorPosition(10,1);
+        Int32.TryParse(Console.ReadLine(), out int playerChoise2);
+        Console.SetCursorPosition(0,1);
+        Console.WriteLine("                                                  ");
+        Console.SetCursorPosition(0,1);
         if ((playerChoise1 >= 10 && playerChoise1 <=24 && playerChoise2 == 99) || (playerChoise2 >= 10 && playerChoise2 <=24 && playerChoise1 == 99))
         {
             if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki1, playerChoise2) != -1)
