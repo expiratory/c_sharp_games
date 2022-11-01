@@ -30,6 +30,7 @@ bool CheckArraysEquality(int[] arr1, int[] arr2)
 
 void playgroundFill()
 {
+    Console.Clear();
     Console.SetCursorPosition(2,2);
     Console.WriteLine(" ___________________ ");
 
@@ -273,12 +274,20 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
             continue;
         }
     }
+    if (CheckArraysEquality(fifteenki1, GG1) == true && CheckArraysEquality(fifteenki2, GG2) == true && CheckArraysEquality(fifteenki3, GG3) == true && CheckArraysEquality(fifteenki4, GG4) == true)
+        {
+            Console.WriteLine("Вы выиграли! Нажмите Enter чтобы выйти: ");
+            while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
+        }
 }
 
 mixArray(fifteenki1);
 mixArray(fifteenki2);
 mixArray(fifteenki3);
 mixArray(fifteenki4);
+
+Console.WriteLine("Пятнашки. Нажмите Enter, чтобы начать игру: ");
+while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
 
 playgroundFill();
 

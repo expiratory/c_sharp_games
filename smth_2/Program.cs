@@ -2,6 +2,7 @@
 
 void playgroundFill()
 {
+    Console.Clear();
     Console.SetCursorPosition(2,2);
     Console.WriteLine(" ___________ ");
 
