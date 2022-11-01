@@ -1,9 +1,9 @@
 ﻿Console.Clear();
 
-int[] fifteenki1 = {10,11,12,13};
-int[] fifteenki2 = {14,15,16,17};
-int[] fifteenki3 = {18,19,20,21};
-int[] fifteenki4 = {22,23,24,99};
+int[] fifteenki1 = {1,2,3,4};
+int[] fifteenki2 = {5,6,7,8};
+int[] fifteenki3 = {9,10,11,12};
+int[] fifteenki4 = {13,14,15,0};
 
 bool CheckArraysEquality(int[] arr1, int[] arr2)
 {
@@ -38,7 +38,31 @@ void playgroundFill()
     Console.WriteLine("|    |    |    |    |");
 
     Console.SetCursorPosition(2,4);
-    Console.WriteLine($"| {fifteenki1[0]} | {fifteenki1[1]} | {fifteenki1[2]} | {fifteenki1[3]} |");
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(4,4);
+    Console.WriteLine(fifteenki1[0]);
+    
+    Console.SetCursorPosition(7,4);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(9,4);
+    Console.WriteLine(fifteenki1[1]);
+
+    Console.SetCursorPosition(12,4);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(14,4);
+    Console.WriteLine(fifteenki1[2]);
+
+    Console.SetCursorPosition(17,4);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(19,4);
+    Console.WriteLine(fifteenki1[3]);
+
+    Console.SetCursorPosition(22,4);
+    Console.WriteLine("|");
 
     Console.SetCursorPosition(2,5);
     Console.WriteLine("|____|____|____|____|");
@@ -47,7 +71,31 @@ void playgroundFill()
     Console.WriteLine("|    |    |    |    |");
 
     Console.SetCursorPosition(2,7);
-    Console.WriteLine($"| {fifteenki2[0]} | {fifteenki2[1]} | {fifteenki2[2]} | {fifteenki2[3]} |");
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(4,7);
+    Console.WriteLine(fifteenki2[0]);
+
+    Console.SetCursorPosition(7,7);
+    Console.WriteLine("|");
+    
+    Console.SetCursorPosition(9,7);
+    Console.WriteLine(fifteenki2[1]);
+
+    Console.SetCursorPosition(12,7);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(14,7);
+    Console.WriteLine(fifteenki2[2]);
+
+    Console.SetCursorPosition(17,7);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(19,7);
+    Console.WriteLine(fifteenki2[3]);
+
+    Console.SetCursorPosition(22,7);
+    Console.WriteLine("|");
 
     Console.SetCursorPosition(2,8);
     Console.WriteLine("|____|____|____|____|");
@@ -56,7 +104,31 @@ void playgroundFill()
     Console.WriteLine("|    |    |    |    |");
 
     Console.SetCursorPosition(2,10);
-    Console.WriteLine($"| {fifteenki3[0]} | {fifteenki3[1]} | {fifteenki3[2]} | {fifteenki3[3]} |");
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(4,10);
+    Console.WriteLine(fifteenki3[0]);
+
+    Console.SetCursorPosition(7,10);
+    Console.WriteLine("|");
+    
+    Console.SetCursorPosition(9,10);
+    Console.WriteLine(fifteenki3[1]);
+
+    Console.SetCursorPosition(12,10);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(14,10);
+    Console.WriteLine(fifteenki3[2]);
+
+    Console.SetCursorPosition(17,10);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(19,10);
+    Console.WriteLine(fifteenki3[3]);
+
+    Console.SetCursorPosition(22,10);
+    Console.WriteLine("|");
 
     Console.SetCursorPosition(2,11);
     Console.WriteLine("|____|____|____|____|");
@@ -65,7 +137,31 @@ void playgroundFill()
     Console.WriteLine("|    |    |    |    |");
 
     Console.SetCursorPosition(2,13);
-    Console.WriteLine($"| {fifteenki4[0]} | {fifteenki4[1]} | {fifteenki4[2]} | {fifteenki4[3]} |");
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(4,13);
+    Console.WriteLine(fifteenki4[0]);
+
+    Console.SetCursorPosition(7,13);
+    Console.WriteLine("|");
+    
+    Console.SetCursorPosition(9,13);
+    Console.WriteLine(fifteenki4[1]);
+
+    Console.SetCursorPosition(12,13);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(14,13);
+    Console.WriteLine(fifteenki4[2]);
+
+    Console.SetCursorPosition(17,13);
+    Console.WriteLine("|");
+
+    Console.SetCursorPosition(19,13);
+    Console.WriteLine(fifteenki4[3]);
+
+    Console.SetCursorPosition(22,13);
+    Console.WriteLine("|");
 
     Console.SetCursorPosition(2,14);
     Console.WriteLine("|____|____|____|____|");
@@ -73,24 +169,40 @@ void playgroundFill()
     Console.SetCursorPosition(0,1);
 }
 
-void mixArray(int[] array)
+void mixArray(int[] array11, int[] array22, int[] array33, int[] array44)
 {
-    int repeat = new Random().Next(5,10);
+    int repeat = new Random().Next(2,3);
     int count = 0;
-    while (count < repeat)
+    if (array11.Length == array22.Length && array33.Length == array44.Length && array22.Length == array33.Length)
     {
-        int size = array.Length;
-        int i = 0;
-        int temp = 0;
-        int j = i + 1;
-        while (i < size)
+    while (count < repeat)
         {
-            temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-            i++;
+            int size = array11.Length;
+            int i = 0;
+            int temp = 0;
+            int j = i + 1;
+            while (i < size)
+            {
+                temp = array11[i];
+                array11[i] = array11[j];
+                array11[j] = temp;
+
+                temp = array11[i];
+                array11[i] = array22[i];
+                array22[i] = temp;
+
+                temp = array22[i];
+                array22[i] = array33[i];
+                array33[i] = temp;
+
+                temp = array33[i];
+                array33[i] = array44[i];
+                array44[i] = temp;
+
+                i++;
+            }
+            count++;
         }
-        count++;
     }
 }
 
@@ -113,26 +225,26 @@ int findPosition(int[] array, int find)
 
 void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
 {
-    int[] GG1 = {10,11,12,13};
-    int[] GG2 = {14,15,16,17};
-    int[] GG3 = {18,19,20,21};
-    int[] GG4 = {22,23,24,99};
+    int[] GG1 = {1,2,3,4};
+    int[] GG2 = {5,6,7,8};
+    int[] GG3 = {9,10,11,12};
+    int[] GG4 = {13,14,15,0};
 
     while(CheckArraysEquality(fifteenki1, GG1) == false || CheckArraysEquality(fifteenki2, GG2) == false || CheckArraysEquality(fifteenki3, GG3) == false || CheckArraysEquality(fifteenki4, GG4) == false)
     {
-        Console.WriteLine("Выбор 1: ");
-        Console.SetCursorPosition(10,1);
+        Console.WriteLine("Выбор поля 1: ");
+        Console.SetCursorPosition(15,1);
         Int32.TryParse(Console.ReadLine(), out int playerChoise1);
         Console.SetCursorPosition(0,1);
         Console.WriteLine("                                                  ");
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("Выбор 2: ");
-        Console.SetCursorPosition(10,1);
+        Console.WriteLine("Выбор поля 2: ");
+        Console.SetCursorPosition(15,1);
         Int32.TryParse(Console.ReadLine(), out int playerChoise2);
         Console.SetCursorPosition(0,1);
         Console.WriteLine("                                                  ");
         Console.SetCursorPosition(0,1);
-        if ((playerChoise1 >= 10 && playerChoise1 <=24 && playerChoise2 == 99) || (playerChoise2 >= 10 && playerChoise2 <=24 && playerChoise1 == 99))
+        if ((playerChoise1 >= 1 && playerChoise1 <=15 && playerChoise2 == 0) || (playerChoise2 >= 1 && playerChoise2 <=15 && playerChoise1 == 0))
         {
             if (findPosition(fifteenki1, playerChoise1) != -1 && findPosition(fifteenki1, playerChoise2) != -1)
             {
@@ -281,12 +393,10 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
         }
 }
 
-mixArray(fifteenki1);
-mixArray(fifteenki2);
-mixArray(fifteenki3);
-mixArray(fifteenki4);
+mixArray(fifteenki1, fifteenki2, fifteenki3, fifteenki4);
 
-Console.WriteLine("Пятнашки. Нажмите Enter, чтобы начать игру: ");
+Console.WriteLine("Пятнашки. Введите поочередно номера двух полей, которые хотите поменять местами.");
+Console.WriteLine("Одним из полей всегда должен быть 0 - пустое поле. Нажмите Enter, чтобы начать игру: ");
 while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
 
 playgroundFill();
