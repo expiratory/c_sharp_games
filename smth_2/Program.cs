@@ -169,11 +169,14 @@ void playGame()
     while (i < 9)
     {
         Console.SetCursorPosition(0,1);
+        Console.WriteLine("                                                                                                ");
+        Console.SetCursorPosition(0,1);
         Console.WriteLine("Выберите номер поля для хода: ");
         Console.SetCursorPosition(32,1);
         Int32.TryParse(Console.ReadLine(), out int choise);
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("                                                                                                    ");
+        Console.WriteLine("                                                                                                ");
+        Console.SetCursorPosition(0,1);
         if (choise >= 1 && choise <= 9)
         {
             pos = findAlreadyChosen(alreadyChosen, choise);
@@ -290,18 +293,22 @@ void playGame()
             }
             else
             {
+                Console.WriteLine("Такой ход уже делали. Нажмите Enter, чтобы ввести номер поля еще раз: ");
+                while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
                 continue;
             }
         }
         else
         {
+            Console.WriteLine("Нужно ввести номер поля от 1 до 9. Нажмите Enter, чтобы ввести номер поля еще раз: ");
+            while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
             continue;
         }
     }
     if (i == 9)
     {
         Console.WriteLine("Ничья! Нажмите Enter чтобы выйти: ");
-        Console.ReadLine();
+        while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
     }
 }
 

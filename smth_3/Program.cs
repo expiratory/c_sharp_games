@@ -232,11 +232,14 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
 
     while(CheckArraysEquality(fifteenki1, GG1) == false || CheckArraysEquality(fifteenki2, GG2) == false || CheckArraysEquality(fifteenki3, GG3) == false || CheckArraysEquality(fifteenki4, GG4) == false)
     {
+        Console.SetCursorPosition(0,1);
+        Console.WriteLine("                                                                                                ");
+        Console.SetCursorPosition(0,1);
         Console.WriteLine("Введите номер клетки, которую хотите передвинуть на пустое место: ");
         Console.SetCursorPosition(66,1);
         Int32.TryParse(Console.ReadLine(), out int playerChoise1);
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("                                                                                                   ");
+        Console.WriteLine("                                                                                                ");
         Console.SetCursorPosition(0,1);
         if (playerChoise1 >= 1 && playerChoise1 <=15)
         {
@@ -372,11 +375,15 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
             }
             else
             {
+                Console.WriteLine("Это поле нельзя переместить на пустую клетку. Нажмите Enter, чтобы ввести номер поля еще раз: ");
+                while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
                 continue;
             }
         }
         else
         {
+            Console.WriteLine("Нужно ввести номер поля от 1 до 15. Нажмите Enter, чтобы ввести номер поля еще раз: ");
+            while (Console.ReadKey(true).Key != ConsoleKey.Enter) {Console.Write("");}
             continue;
         }
     }
