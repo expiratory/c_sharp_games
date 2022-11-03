@@ -235,8 +235,8 @@ void gamePlay(int[] array1, int[] array2, int[] array3, int[] array4)
         Console.SetCursorPosition(0,1);
         Console.WriteLine("                                                                                                ");
         Console.SetCursorPosition(0,1);
-        Console.WriteLine("Введите номер клетки, которую хотите передвинуть на пустое место: ");
-        Console.SetCursorPosition(66,1);
+        Console.WriteLine("Введите номер поля, которую хотите передвинуть на пустое место: ");
+        Console.SetCursorPosition(64,1);
         Int32.TryParse(Console.ReadLine(), out int playerChoise1);
         Console.SetCursorPosition(0,1);
         Console.WriteLine("                                                                                                ");
